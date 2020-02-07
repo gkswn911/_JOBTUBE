@@ -1,11 +1,24 @@
-.nav.container
-  nav.navbar.navbar-expand-sm.bg-primary.navbar-dark
-    ul.navbar-nav
-      li.nav-item.active
-        a.nav-link(href='#') Active
-      li.nav-item
-        a.nav-link(href='#') Link
-      li.nav-item
-        a.nav-link(href='#') Link
-      li.nav-item
-        a.nav-link.disabled(href='#') Disabled
+.container(style="margin-top:1rem")
+  .row(style="margin-bottom:1.5rem")
+    //Title
+    h1(style="margin-left:auto; margin-right:27%") Job Tube
+    //Select Language
+    .dropdown(style="margin-right:10%")
+      button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown') 언어
+      .dropdown-menu
+        a.dropdown-item(href='#') 한국어
+        a.dropdown-item(href='#') 영어
+        a.dropdown-item(href='#') 일본어
+  .row
+    //nav bar
+    .nav.container
+      nav.navbar.navbar-expand-sm.bg-primary.navbar-dark(style="width:100%")
+        ul.navbar-nav
+          li.nav-item.active
+            a.nav-link(href='#') 지역별
+          li.nav-item
+            a.nav-link(href='#') 직업별
+          li.nav-item
+            a.nav-link(href='#') 큐레이션
+          li.nav-item
+            a.nav-link(href='#') 공채
