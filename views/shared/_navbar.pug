@@ -1,24 +1,60 @@
-.container(style="margin-top:1rem")
-  .row(style="margin-bottom:1.5rem")
-    //Title
-    h1(style="margin-left:auto; margin-right:27%") Job Tube
-    //Select Language
-    .dropdown(style="margin-right:10%")
-      button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown') 언어
-      .dropdown-menu
-        a.dropdown-item(href='#') 한국어
-        a.dropdown-item(href='#') 영어
-        a.dropdown-item(href='#') 일본어
-  .row
-    //nav bar
-    .nav.container
-      nav.navbar.navbar-expand-sm.bg-primary.navbar-dark(style="width:100%")
-        ul.navbar-nav
-          li.nav-item.active
-            a.nav-link(href='#') 지역별
-          li.nav-item
-            a.nav-link(href='#') 직업별
-          li.nav-item
-            a.nav-link(href='#') 큐레이션
-          li.nav-item
-            a.nav-link(href='#') 공채
+doctype html
+html
+  head
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    link(rel='stylesheet' text='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=' crossorigin='anonymous')
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+    style
+      include _navbar.css
+  body
+    .container(style="margin-top:1rem")
+      .row(style="margin-bottom:1.5rem")
+        //Title
+        h1(style="margin-left:auto; margin-right:27%") Job Tube
+        //Select Language
+        .dropdown(style="margin-right:10%")
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown') 언어
+          .dropdown-menu
+            a.dropdown-item(href='#') 한국어
+            a.dropdown-item(href='#') 영어
+            a.dropdown-item(href='#') 일본어
+      .row
+        .col-lg-12
+          //nav bar
+          .menu
+            ul
+              li.toggle
+                span.bars
+              li
+                a(href='#') 지역별
+              li
+                a(href='#') 직업별
+              li.active.sub
+                a(href='#') 직종
+                ul
+                  li.sub
+                    a(href='#') 사무직
+                    ul
+                      li
+                        a(href='#') 프로그래머
+                      li.last
+                        a(href='#') 워더
+                  li.sub
+                    a(href='#') 생산직
+                    ul
+                      li
+                        a(href='#') 반도체
+                      li.last
+                        a(href='#') 기타
+              li
+                a(href='#') 큐레이션
+              li.last
+                a(href='#') 공채
+              li.search
+                .box
+                  .container-1
+                    span.icon
+                      i.fa.fa-search
+                    input#search(type='search' placeholder='Search...')
