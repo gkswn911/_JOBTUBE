@@ -57,42 +57,8 @@ head
     body .container .content label:not([for='remember']) {
     display: none;
     }
-    body .container .content input.inpt {
-    font-size: 14px;
-    display: block;
-    width: 100%;
-    height: 42px;
-    margin-bottom: 12px;
-    padding: 16px 13px;
-    color: #999999;
-    border: 1px solid #d9d9d9;
-    background: transparent;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    }
-    body .container .content input.inpt::-webkit-input-placeholder {
-    font-size: 14px;
-    color: #999999;
-    font-family: 'Lato', sans-serif;
-    }
-    body .container .content input.inpt:-moz-placeholder {
-    font-size: 14px;
-    color: #999999;
-    font-family: 'Lato', sans-serif;
-    }
-    body .container .content input.inpt::-moz-placeholder {
-    font-size: 14px;
-    color: #999999;
-    font-family: 'Lato', sans-serif;
-    }
-    body .container .content input.inpt:-ms-input-placeholder {
-    font-size: 14px;
-    color: #999999;
-    font-family: 'Lato', sans-serif;
-    }
-    body .container .content input.inpt:focus {
-    border-color: #999999;
+    body .container .content label:not([for='remember2']) {
+    display: none;
     }
     body .container .content input.submit {
     font-size: 12px;
@@ -118,9 +84,6 @@ head
     -o-transition: all 0.2s;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    }
-    body .container .content input:focus {
-    outline: none;
     }
     body .container .content .checkbox {
     margin-top: 4px;
@@ -160,62 +123,9 @@ head
     body .container .content .checkbox:checked + label:before {
     content: "✓";
     }
-    body .container .content .submit-wrap {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    }
-
-    body .container .content .submit-wrap a:hover {
-    text-decoration: underline;
-    }
-    body .container .content .signup-cont {
-    display: none;
-    }
     .content input.inp{
     width:210px;
     height:35px;
-    }
-
-    @keyframes slideIn {
-    0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    margin-left: -320px;
-    }
-    100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-    margin-left: 0px;
-    }
-    }
-    @-webkit-keyframes slideIn {
-    0% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    margin-left: -320px;
-    }
-    100% {
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-    margin-left: 0px;
-    }
-    }
-    .credits {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #999999;
-    font-size: 14px;
-    margin: 0 10px 10px 0;
-    }
-    .credits a {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    opacity: 0.8;
-    color: inherit;
-    font-weight: 700;
-    text-decoration: none;
     }
     * {
     margin:0;
@@ -229,19 +139,6 @@ head
     font-size:12px;
     color:444444;
     }
-    #login_box {
-    width:220px;
-    height:120px;
-    border:solid 1px #bbbbbb;
-    border-radius:15px;
-    margin:10px 0 0 10px;
-    padding:10px 0 0 15px;
-    }
-
-    #login_box input {
-    width:100px;
-    height:18px;
-    }
     #id_pass, #login_btn {
     display: inline-block;
     vertical-align: top;
@@ -250,8 +147,6 @@ head
     display: inline-block;
     width:20px;
     }
-    #pass {
-    }
     #login_btn button {
     margin-left:5px;
     padding:12px;
@@ -259,8 +154,6 @@ head
     }
     #btns {
     margin-left:107px;
-
-
     }
     #btns li {
     display:inline;
@@ -269,7 +162,6 @@ head
     #btns li:first-child a{
     color:black;
     font-weight:bold;
-
     }
     #btns li:last-child a{
     color:black;
@@ -301,7 +193,6 @@ head
     text-decoration: underline;
     }
 
-
 section.container
   article.half
     .tabs(data-toggle='buttons')
@@ -328,10 +219,10 @@ section.container
               input.log(type='submit' value='로그인')
           .row#cont_save
             .col-lg-4
-              input#remember.checkbox(type='checkbox' checked='')
+              input#remember.checkbox(type='checkbox' checked=false)
               label(for='remember') 로그인 유지
             .col-lg-4(style='margin-left:-20px;')
-              input#idsave.checkbox(type='checkbox' checked='')
+              input#idsave.checkbox(type='checkbox' checked=false)
               label(for='idsave') 아이디 저장
             .col-lg-3
               .secur(style='fone-size:10px')
@@ -345,20 +236,21 @@ section.container
             li#id_pass
               ul
                 li
-                  input(type='text' name='id' required='required' placeholder='아이디')
+                  input.inp(type='text' name='id' required='required' placeholder='아이디')
                 // id
                 li#pass
-                  input(type='password' name='password' required='required' placeholder='비밀번호')
+                  input.inp(type='password' name='password' required='required' placeholder='비밀번호')
+                  input#remember.checkbox(type='checkbox' checked='')
                 // pass
             li#login_btn
               input.log(type='submit' value='로그인')
           .row#cont_save
             .col-lg-4
-              input#remember.checkbox(type='checkbox' checked='')
-              label(for='remember') 로그인 유지
+              input#remember2.checkbox(type='checkbox' checked=false)
+              label(for='remember2') 로그인 유지
             .col-lg-4(style='margin-left:-20px;')
-              input#idsave.checkbox(type='checkbox' checked='')
-              label(for='idsave') 아이디 저장
+              input#idsave2.checkbox(type='checkbox' checked=false)
+              label(for='idsave2') 아이디 저장
             .col-lg-3
               .secur(style='fone-size:10px')
                 a.sec(href='#') 보안
@@ -374,6 +266,7 @@ script(type='text/javascript').
   $('.tabs .enterprise').css("background","lightgray");
   $('.tabs .enterprise').css("color","skyblue");
   });
+  
   $('.content .secur').click(function(){
   if($('.content .secur a.on').html()=='ON'){
   $('.content .secur a.on').html('OFF');
@@ -381,7 +274,9 @@ script(type='text/javascript').
   else{
   $('.content .secur a.on').html('ON');
   }
+  event.preventDefault();
   });
+
   $('.tabs label').click(function(){
   if ($(this).hasClass('individual')) {
   $('.tabs .tab').removeClass('active');
