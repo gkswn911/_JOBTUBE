@@ -6,6 +6,9 @@ var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var registerRouter=require('./routes/register');
+var findIdRouter=require('./routes/findId');
+var findPwRouter=require('./routes/findPw');
 
 var app = express();
 
@@ -23,5 +26,8 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/register',registerRouter);
+app.use('/findId',findIdRouter);
+app.use('/findPw',findPwRouter);
 
 module.exports = app;
