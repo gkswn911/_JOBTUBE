@@ -1,5 +1,6 @@
 doctype html
 head
+  link(rel='stylesheet' text='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
   meta(charset='UTF-8')
   title http://www.blueb.co.kr
   style(rel='stylesheet').
@@ -139,7 +140,6 @@ head
     color:444444;
     }
     #id_pass, #login_btn {
-    display: inline-block;
     vertical-align: top;
     }
     #id_pass span {
@@ -150,6 +150,9 @@ head
     margin-left:5px;
     padding:12px;
     border-radius:5px;
+    }
+    #phone_email{
+    vertical-align: top;
     }
     #btns {
     margin-left:107px;
@@ -192,62 +195,68 @@ head
     text-decoration: underline;
     }
 
-section.container
+section.container(style="width:50%; height:50rem; margin-top:3rem; margin-left:auto; margin-right:auto; padding:5rem; border:1px solid lightgrey; border-radius:1rem")
   article.half
     .tabs(data-toggle='buttons')
       label.individual.active 개인
       label.enterprise 기업
-    .content
+    .content(style='text-align:center;')
       .individual-cont.cont
         form(action='#' method='post' enctype='multipart/form-data')
           ul#input_button
             li#id_pass
               ul
                 li
-                  h1 ID/PW
+                  h5(style='margin-top:1rem;') ID
                 li
-                  input(type='text' name='id' required='required' placeholder='아이디')
-                // id
+                  input.form-control(type='text' name='id' required='required' placeholder='아이디' style='width:20rem; margin: 0 auto; text-align:center;')
+                h5(style='margin-top:1rem') PW
                 li#pass
-                  input(type='password' name='password' required='required' placeholder='비밀번호')
+                  input.form-control(type='password' name='password' required='required' placeholder='비밀번호' style='width:20rem; margin: 0 auto; text-align:center;')
                 // pass
             li#phone_email
               ul
                 li
-                  h1 &#xD734;&#xB300;&#xD3F0; &#xBC88;&#xD638;/&#xC774;&#xBA54;&#xC77C;
+                  h5(style='margin-top:1rem') 휴대폰 번호
+                li(style='margin: 0 auto;')
+                  input.form-control(type='text' name='phone' required='required' placeholder='핸드폰 번호'
+                  style='width:30rem; margin: 0 auto; text-align:center;')
+                h5(style='margin-top:1rem') 이메일    
                 li
-                  input(type='text' name='phone' required='required' placeholder='핸드폰 번호')
-                li
-                  input(type='email' name='email' required='required' placeholder='이메일')
+                  input.form-control(type='email' name='email' required='required' placeholder='이메일' style='width:30rem; margin: 0 auto; text-align:center;')
             li#belongto
               ul
                 li
-                  h1 &#xC18C;&#xC18D;
+                  h5(style='margin-top:1rem') 소속
                 li
-                  input(type='text' name='belong' required='required' placeholder='소속')
+                  input.form-control(type='text' name='belong' required='required' placeholder='소속' style='width:15rem; margin: 0 auto; text-align:center;')
             li#login_btn
-              input.log(type='submit' value='회원가입 완료')
-      hr
+              input.log(style='width:150px; font-weight:bold; border:1px solid black; border-radius:1rem; font-size: 15px;   margin:20px auto; margin-top:100px;' type='submit'
+              value='회원가입 완료')
       .enterprise-cont.cont
-        form(action='#' method='post' enctype='multipart/form-data')
+        form(action='#' method='post' enctype='multipart/form-data'
+        style='text-align:center;')
           ul#input_button
             li
               ul
                 li
-                  h1 &#xAE30;&#xC5C5;&#xC778;&#xC99D;
+                  h5(style='margin-top:1rem') 기업인증
                 li
-                  input(type='text' name='CompanyRegistrationNumber' required='required' placeholder='사업자등록번호 입력')
+                  input.form-control(type='text' name='CompanyRegistrationNumber' required='required' placeholder='사업자등록번호 입력' style='width:24rem; margin: 0 auto; text-align:center;')
             li#id_pass
               ul
                 li
-                  h1 ID/PW
+                  h5(style='margin-top:1rem') ID
                 li
-                  input(type='text' name='id' required='required' placeholder='아이디')
+                  input.form-control(type='text' name='id' required='required' placeholder='아이디'
+                  style='width:15rem; margin: 0 auto; text-align:center;')
+                h5(style='margin-top:1rem') PW
                 li#pass
-                  input(type='password' name='password' required='required' placeholder='비밀번호')
+                  input.form-control(type='password' name='password' required='required' placeholder='비밀번호' style='width:15rem; margin: 0 auto; text-align:center;')
             li#login_btn
-              input.log(type='submit' value='회원가입 완료')
-              
+              input.log(style='width:150px; font-weight:bold; border:1px solid black; border-radius:1rem; font-size: 15px;   margin:20px auto; margin-top:250px;' type='submit'
+              value='회원가입 완료')
+  
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 script(type='text/javascript').
   $(document).ready(function(){
