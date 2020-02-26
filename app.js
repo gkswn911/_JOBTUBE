@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var registerRouter=require('./routes/register');
 var findIdRouter=require('./routes/findId');
 var findPwRouter=require('./routes/findPw');
+var scrapRouter=require('./routes/scrap');
 
 var app = express();
 
@@ -28,5 +29,6 @@ app.use('/users', usersRouter);
 app.use('/register',registerRouter);
 app.use('/findId',findIdRouter);
 app.use('/findPw',findPwRouter);
+app.use('/scrap',scrapRouter);
 
 module.exports = app;
