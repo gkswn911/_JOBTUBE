@@ -1,0 +1,19 @@
+doctype html
+head
+  style
+    include ./login_individual.css
+  link(rel='stylesheet',href='/stylesheets/login_individual.css')
+    
+.box_logedin
+  h2 000님
+  h5 MY STUDIO
+  //로그아웃 버튼
+  a.myButton(href='#' onclick="location.href='http://www.naver.com'") 로그아웃
+  img.aaa(src='/images/profile.png' alt='프로필 사진' width='130px' height='100px')
+  img.bbb(src='/images/studio.jpg' border='0' width='40px' height='60px' href='#' onclick="location.href='http://www.google.com'")
+
+  //지원현황,스크랩,마이페이지 버튼
+  .btn-group.b
+    button(type='button' onclick="location.href='http://www.saramin.co.kr'") 지원현황
+    button(type='button' onclick="location.href='http://www.albamon.com'") 스크랩
+    button(type='button' onclick="location.href='http://www.alba.co.kr'") 마이페이지
