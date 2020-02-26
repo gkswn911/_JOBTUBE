@@ -2,65 +2,79 @@ doctype html
 head
     link(rel='stylesheet' text='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
     
-.container(style="margin-top:3rem;")
+.container(style="margin-top:3rem")
     .row(style=" margin-bottom:1rem")
         h1
             b 지원 현황
-        img(src="images/clipboard.png", alt="지원 현황", width="50rem")
+        img(src="images/clipboard.png", alt="지원 현황", width="50rem" style="margin-left:1rem")
 
-    .row
-        .col-2
-            button.btn.btn-secondary 스크랩 취소
-        .col-10(style="text-align:right")
-            a(href="#", style="margin-left:auto") 스크랩일 순
-            a(style="margin-left:0.5rem; margin-right:0.5rem;") |
-            a(href="#") 급여 순
-            a(style="margin-left:0.5rem; margin-right:0.5rem;") | 
-            a(href="#") 마감일 순
-            form(style="margin-left:1rem; display:inline-block")
+    .row(style="margin-top:3rem; border:1px solid lightgrey; padding:2rem")
+        .col
+            .row
+                .col-2
+                    h5(style = 'margin-right:1rem') 조회 기간 
+                .col-10
+                    ul.list-group.list-group-horizontal(style = 'height:3rem')
+                        li.list-group-item 1주일
+                        li.list-group-item 1개월
+                        li.list-group-item 2개월
+                        li.list-group-item 3개월
+
+            .row(style="margin-top:1rem")
+                .col-2
+                    h5 기업명/제목
+                .col-8
+                    .form-group
+                        input#usr.form-control(type='text')
+                .col-2
+                    button.btn.btn-secondary(type='button' style="margin-left:1rem; height:2.5rem") 검색
+
+    br
+    
+    form(style="float:right; display:inline-block;")
                 select.custom-select
                     option 20개씩 보기
                     option 10개씩 보기
+    br
+    br
+
     .row(style="margin-top:1rem")
         table.table.table-bordered(style="text-align:center")
-            tr.table-secondary
-                th
-                th 스크랩일
-                th 기업명/모집제목
-                th 지역
-                th 급여
-                th 게재상태
+            tr.table-secondary(style="height:4.5rem; margin-top:auto; margin-bottom:auto")
+                th 지원일
+                th 지원 내역
+                th 열람 여부
+                th 게재 상태
+                th 메모
                 th 지원 여부
             tr
+                td 2019.02.01
+                td 주성민 딱가리
+                td 미열람
+                td 모집중
+                td 면접일 : 2월 28일
                 td 
-                    .form-check
-                        input#check1.form-check-input(type="checkbox")
-                td 2019.02.01
-                td LG전자 / 신규직 일반 채용
-                td 서울 강남구
-                td 연봉 : 6000만원
-                td 모집중
-                td 지원 완료
+                    button.btn.btn-primary(type='button') 지원 취소
+
             tr
-                td
-                    .form-check
-                        input#check1.form-check-input(type="checkbox")
-                td 2019.02.01
-                td LG전자 / 신규직 일반 채용
-                td 서울 강남구
-                td 연봉 : 6000만원
-                td 모집중
-                td 지원 완료
+                td 2019.02.14
+                td 주성민 하인
+                td 미열람
+                td 모집완료
+                td 준비물 : 노트북
+                td 
+                    button.btn.btn-primary(type='button') 지원 완료
+
             tr
-                td
-                    .form-check
-                        input#check1.form-check-input(type="checkbox")
-                td 2020.02.20
-                td 민지 딱가리 / 경력직 채용
-                td 서울 강남구
-                td 연봉 : 5000만원
+                td 2019.03.27
+                td 누드 모델
+                td 열람
                 td 모집중
-                td 지원 완료
+                td 면접일 : 4월 2일
+                td 
+                    button.btn.btn-primary(type='button') 지원 완료
+    br
+    br
             
                 
     .row
