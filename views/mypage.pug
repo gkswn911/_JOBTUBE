@@ -1,0 +1,80 @@
+doctype html
+head
+  style
+    include ./mypage.css
+  link(rel='stylesheet' text='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+
+.container
+    h1(style='display:inline-block; margin-top:30px;') 마이페이지
+    img.profile2(src='/images/mypage.png' alt='프로필 사진' width='80px' height='60px')(style='display:inline-block; top:-10px;')
+    .row(style="margin-top:30px;")
+        .col-lg-4
+            .box_profile
+                h3(style="margin-left:20px; margin-top:10px;") 프로필
+                img.profile2(src='/images/profile2.png' alt='프로필 사진' width='100px' height='80px')(style="margin-left:20px")
+                table.table1(style="margin-left:150px; margin-top:-80px" width='250px' height='150px')
+                    tr
+                        td 이름 엄건욱
+                    tr
+                        td 이메일 abcd@naver.com
+                    tr
+                        td 휴대전화 010-1111-2222
+                    tr
+                        td 관심분야 게임 게발
+                button.btn.btn-secondary(style="margin-top:-50px; margin-left:30px" width='70px') 수정
+                        
+                   
+        .col-lg-4          
+            .box_mystudio
+                h3(style="margin-left:20px; margin-top:10px;") MY STUDIO 
+                img.mystudio(src='/images/mystudio.png' alt='프로필 사진' width='100px' height='80px')(style="margin-left:20px")
+                table.table1(style="margin-left:150px; margin-top:-60px" width='250px' height='80px')
+                    tr
+                        td 방문자 수 : 00 명 ♥
+                    tr
+                        td 좋아요 수 : 00 개 
+                button.btn.btn-secondary(style="margin-top:30px; margin-left:100px") MY STUDIO 바로가기
+    .row
+        .col-lg-4
+            .box_information
+                h3(style="margin-left:20px; margin-top:10px;") 회원정보
+                img.information(src='/images/information.png' alt='프로필 사진' width='100px' height='80px')(style="margin-left:10px")
+                table.table1(style="margin-left:150px; margin-top:-70px" width='250px' height='130px')
+                    tr
+                        td 아이디 띵지잡
+                    tr
+                        td 비밀번호 
+                        td
+                            a(href='URL' target='비번링크')(style=" margin-left:-150px;" position="relative") 변경하기
+                    tr
+                        td 집 주소
+                button.btn.btn-secondary(style="margin-top:-10px; margin-left:30px") 수정
+        .col-lg-4   
+            .box_setting
+                h3(style="margin-left:20px; margin-top:10px;") 데이터 및 맞춤 설정
+                img.setting(src='/images/setting.png' alt='프로필 사진' width='100px' height='80px')(style="margin-left:20px")
+                table.table1(style="margin-left:150px; margin-top:-60px" width='300px' height='130px')
+                    tr
+                        td(width='70px') 데이터
+                        td
+                            a(href= 'URL' target='데이터설정')(style="margin-top:20px;") WIFI만 사용
+                    tr
+                        td(width='70px') 위치기록
+                        td
+                            label.switch
+                                input(type='checkbox')
+                                span.slider.round
+                            p OFF
+                            p(style='display:none;') ON
+                            
+                    tr
+                        td(width='70px') 언어
+                        td
+                            a(href='URL' target='언어설정')(style="left:150px; top:100px;") 한국어
+
+script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js')
+script(type='text/javascript').
+    var check = $("input[type='checkbox']");
+    check.click(function(){
+        $("p").toggle();
+    });
