@@ -1,0 +1,47 @@
+doctype html
+head
+    link(rel='stylesheet' text='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+    
+    
+    script(type='text/javascript').
+        function openCareer(){
+            document.getElementById('careerBtn').innerHTML='<button id="careerBtn" onclick="closeCareer()">지역 선택 ▲</button>';
+            document.getElementById('info').innerHTML='<div class="form-group" style="margin-top:1rem"><input type="text" autofocus placeholder = "지역명 입력" class="form-control"></div>';
+        };
+
+        function closeCareer(){
+            document.getElementById('careerBtn').innerHTML='<button  id="careerBtn" onclick="openCareer()">지역 선택 ▼</button>';
+            document.getElementById('info').innerHTML='';
+        };
+
+        function openGrade(){
+            document.getElementById('gradeBtn').innerHTML='<button id="gradeBtn" onclick="closeGrade()">직업 선택 ▲</button>';
+            document.getElementById('info').innerHTML='<div class="form-group" style="margin-top:1rem"><input type="text" autofocus placeholder = "직업(직종) 입력" class="form-control"></div>';
+        };
+
+        function closeGrade(){
+
+            document.getElementById('gradeBtn').innerHTML='<button id="gradeBtn" onclick="openGrade()">직업 선택 ▼</button>';
+            document.getElementById('info').innerHTML='';
+        };
+        
+        
+body 
+    include shared/_navbar.pug
+
+
+    .container(style="margin-top:2rem")
+        h3 직업별(직종)
+        .row(style="border:3px solid lightgrey")
+            .row(style = "padding:20px")
+                #careerBtn
+                    button(type='button' onclick='openCareer()') 지역 선택 ▼
+                #gradeBtn
+                    button(type='button' onclick='openGrade()') 직업 선택 ▼
+                #searchBtn  
+                    <input type="text" placeholder="검색어 입력">
+                #detailBtn 
+                    button( type="button") 상세 조건
+            #info
+
+
