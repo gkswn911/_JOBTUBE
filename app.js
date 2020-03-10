@@ -11,7 +11,11 @@ var findIdRouter=require('./routes/findId');
 var findPwRouter=require('./routes/findPw');
 var scrapRouter=require('./routes/scrap');
 var appRouter=require('./routes/application');
-var kindRouter=require('./routes/kind');
+var indivRegister=require('./routes/IndivRegister');
+var enterRegister=require('./routes/EnterRegister');
+var indivlog=require('./routes/IndivLogin');
+var enterlog=require('./routes/EnterLogin');
+require('./db');
 
 var app = express();
 
@@ -33,6 +37,9 @@ app.use('/findId',findIdRouter);
 app.use('/findPw',findPwRouter);
 app.use('/scrap',scrapRouter);
 app.use('/application',appRouter);
-app.use('/kind',kindRouter);
+app.use('/process/indiv',indivRegister);
+app.use('/process/enter',enterRegister);
+app.use('/process/indivlog',indivlog);
+app.use('/process/enterlog',enterlog);
 
 module.exports = app;
