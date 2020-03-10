@@ -1,11 +1,11 @@
-var User=require('../models/indivuser');
-var express=require('express');
-var router=express.Router();
+const User=require('../models/indivuser');
+const express=require('express');
+const router=express.Router();
 
 router.post('/',(req,res,next)=>{
     console.log('실행');
-    var id=req.body.id;
-    var password=req.body.password;
+    let id=req.body.id;
+    let password=req.body.password;
 
     console.log(id,password);
 

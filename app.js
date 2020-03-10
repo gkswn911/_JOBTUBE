@@ -1,23 +1,23 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var registerRouter=require('./routes/register');
-var findIdRouter=require('./routes/findId');
-var findPwRouter=require('./routes/findPw');
-var scrapRouter=require('./routes/scrap');
-var appRouter=require('./routes/application');
-var indivRegister=require('./routes/IndivRegister');
-var enterRegister=require('./routes/EnterRegister');
-var indivlog=require('./routes/IndivLogin');
-var enterlog=require('./routes/EnterLogin');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const registerRouter=require('./routes/register');
+const findIdRouter=require('./routes/findId');
+const findPwRouter=require('./routes/findPw');
+const scrapRouter=require('./routes/scrap');
+const appRouter=require('./routes/application');
+const indivRegister=require('./routes/IndivRegister');
+const enterRegister=require('./routes/EnterRegister');
+const indivlog=require('./routes/IndivLogin');
+const enterlog=require('./routes/EnterLogin');
 require('./db');
 
-var app = express();
+const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug'); // views에 있는 파일들이 pug 템플릿으로 작성될 것이라고 선언.

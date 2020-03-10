@@ -1,6 +1,6 @@
-var mongoose=require('mongoose');
+const mongoose=require('mongoose');
 
-var EnterUserSchema=new mongoose.Schema({
+const EnterUserSchema=new mongoose.Schema({
     CompanyRegistrationNumber:{type:String,required:true,unique:true},
     id:{type:String,required:true},
     password:{type:String,required:true}
