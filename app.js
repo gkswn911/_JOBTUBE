@@ -15,6 +15,8 @@ const indivRegister=require('./routes/IndivRegister');
 const enterRegister=require('./routes/EnterRegister');
 const indivlog=require('./routes/IndivLogin');
 const enterlog=require('./routes/EnterLogin');
+const job_openingRouter=require('./routes/job_opening');
+
 require('./db');
 
 const app = express();
@@ -41,5 +43,6 @@ app.use('/process/indiv',indivRegister);
 app.use('/process/enter',enterRegister);
 app.use('/process/indivlog',indivlog);
 app.use('/process/enterlog',enterlog);
+app.use('/job_opening',job_openingRouter);
 
 module.exports = app;

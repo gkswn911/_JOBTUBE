@@ -1,0 +1,82 @@
+head
+    link(rel='stylesheet' text='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+    style
+        include job_opening.css
+    script.
+        //남은 기간 출력해주는 함수.
+        //현재 현재 시간 출력하게 돠어있어 기능 수정해야함 200325
+        window.onload=function(){ 
+            var currentDate = new Date();
+            var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate();
+            var currentHours=currentDate.getHours();
+            var currentMinutes=currentDate.getMinutes();
+            var currentSeconds=currentDate.getSeconds();
+           
+            document.getElementById("clock").innerHTML = currentHours.toString()+":"+currentMinutes.toString()+":"+currentSeconds.toString();
+            setTimeout(arguments.callee, 1000);
+        };
+
+.container(style="margin-top:3rem")
+    p (주)이마트
+    .row
+        .col-lg-8
+            h3
+                b 2020년 이마트 사내변호사 모집
+        .col-lg-4(align="right")
+            img.scrapBtn(src='/images/empty_star.png', alt='스크랩', width="40px", onclick="location.href='#'")
+            button.btn.btn-primary.skyblueBtn(type='button') 지원
+    .row
+        .col-lg-6
+            .topBottomBorder
+                dl
+                    dt 경력
+                    dd 경력 4년
+                dl
+                    dt 학력
+                    dd 대졸(4년제 이상)
+    
+        .col-lg-6(align="right")
+            .topBottomBorder(align="left")
+                dl
+                    dt 급여
+                    dd 회사 내규에 따름
+                dl
+                    dt 근무지역
+                    dd 서울 성동구, 서울 전체
+    .row
+        .col
+            img(src="images/emart_info.png", width="100%")
+        //기타 내용
+            
+    .row(style="margin-top:3rem")
+        .col
+            .row
+                h5
+                    b 접수기간 및 방법
+            .row.informationBox
+                .col-4(align="center", style="padding:2rem 0 2rem 0")
+                    a 남은 기간
+                    #clock(style="font-size:30px; font-weight:bold; color:#007BFF")
+                    .roundBorder(style="border-color:lightgrey; color:lightgrey") 시작일
+                    a 2020.03.12
+                    br
+                    .roundBorder(style="border-color:#00AAFF; color:#00AAFF") 마감일
+                    a 2020.03.25
+                .col-8(style="padding:2rem; background:#F9F9F9")
+                    .textInline 지원방법 
+                    a(href="#") 홈페이지 지원
+            .row
+                h5
+                    b 기업정보
+            .row.informationBox
+                .col-4(align="center")
+                    img(src="images/emart.jpg", alt="logo", width="50%",style="margin-top:10%")
+                .col-8(style="padding:2rem")
+                    .row
+                        h5 (주) 이마트
+                    .row
+                        dl
+                            dt 업종
+                            dd 유통, 판매
+                            dt 기업주소
+                            dd 서울시 어딘가

@@ -1,0 +1,41 @@
+.scrapBtn{
+    border:solid 1px lightgrey;
+    padding:0.5rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+    margin-right:1rem;
+}
+.skyblueBtn{
+    background-color:#87ceeb; border-color:#87ceeb; width:10rem
+}
+.topBottomBorder{
+    border-top:solid 1px lightgrey;
+    border-bottom:solid 1px lightgrey;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left:1rem;
+    margin-top:3rem;
+    margin-bottom:3rem;
+    width:97%;
+}
+.informationBox{
+    border:solid 1px lightgrey;
+    border-top:solid 1px grey;
+    
+    margin-top:1rem;
+    margin-bottom:3rem;
+}
+
+.textInline{
+    display:inline;
+    margin-right:1rem;
+}
+
+.roundBorder{
+    border:solid 1px;
+    border-radius: 15px;
+    display:inline-block;
+    padding:0 1rem 0 1rem;
+    margin-right:1rem;
+    margin-top:0.5rem;
+}
