@@ -15,5 +15,3 @@ const db=mongoose.connection;
 
 db.once('open',handleOpen);
 db.on('error',handleError);
-
-console.log('앙 기모리');
